@@ -3,8 +3,7 @@ import 'package:test/test.dart';
 
 void main() {
   test('search books', () async {
-    GoogleBooksApi googleBooksApi = GoogleBooksApi();
-    final List<Book> books = await googleBooksApi.searchBooks(
+    final List<Book> books = await GoogleBooksApi().searchBooks(
       'a',
       maxResults: 20,
       printType: PrintType.books,
@@ -14,8 +13,7 @@ void main() {
   });
 
   test('get book by id', () async {
-    GoogleBooksApi googleBooksApi = GoogleBooksApi();
-    final Book book = await googleBooksApi.getBookById('H0taAAAAYAAJ');
+    final Book book = await GoogleBooksApi().getBookById('H0taAAAAYAAJ');
     expect(book.volumeInfo.title, 'A Study of Income and Expenditures in Sixty Colleges. Year 1953-54');
   });
 }
