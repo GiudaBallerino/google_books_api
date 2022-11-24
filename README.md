@@ -9,8 +9,9 @@ A dart package to search books with the Google Books Api.
 Add google_books_api to your pubspec.yaml file:
 
 ```yaml
-  dependencies:
-  google_books_api:
+google_books_api:
+  git:
+    url: https://github.com/GiudaBallerino/google_books_api.git
 ```
 Import google_books_api in files that it will be used:
 
