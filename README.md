@@ -31,14 +31,36 @@ final List<Book> books = await GoogleBooksApi().searchBooks(
 ```
 You can use this parameters to make the query more efficient.
 
-| Parameter          | Description                                                                                                                                  | 
-| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- | 
-| queryType          | Keywords to search in particular fields                                                                                                      | 
-| maxResults         | The maximum number of elements to return with this request.                                                                                  | 
-| startIndex         | The position in the collection at which to start the list of results.                                                                        | 
-| langRestrict       | Restrict the search results to those with a certain language by specifying langRestrict to a two-letter ISO-639-1 code, such as "en" or "fr".| 
-| orderBy            | Order of the volume search results.                                                                                                          | 
-| printType          | Restrict to books or magazines.                                                                                                              | 
+<table>
+    <tr>
+        <td>Parameter</td>
+        <td>Description</td>
+    </tr>
+    <tr>
+        <td>queryType</td>
+        <td>Keywords to search in particular fields</td>
+    </tr>
+    <tr>
+        <td>maxResults</td>
+        <td>The maximum number of elements to return with this request.</td>
+    </tr>
+    <tr>
+        <td>startIndex</td>
+        <td>The position in the collection at which to start the list of results.</td>
+    </tr>
+    <tr>
+        <td>langRestrict</td>
+        <td>Restrict the search results to those with a certain language by specifying langRestrict to a two-letter ISO-639-1 code, such as "en" or "fr".</td>
+    </tr>
+    <tr>
+        <td>orderBy</td>
+        <td>Order of the volume search results.</td>
+    </tr>
+    <tr>
+        <td>printType</td>
+        <td>Restrict to books or magazines.</td>
+    </tr>
+</table>
 
 ### Get book by ID
 To get a book from his ID.
