@@ -1,6 +1,6 @@
 name: google_books_api
 description: A library to help on the search for books on google books api
-version: 0.0.1
+version: 1.0.0
 publish_to: none
 
 environment:
