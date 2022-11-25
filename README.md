@@ -30,7 +30,7 @@ final List<Book> books = await GoogleBooksApi().searchBooks(
 );
 ```
 You can use this parameters to make the query more efficient.
-<td>
+
 | Parameter          | Description                                                                                                                                  | 
 | ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------- | 
 | queryType          | Keywords to search in particular fields                                                                                                      | 
@@ -39,7 +39,7 @@ You can use this parameters to make the query more efficient.
 | langRestrict       | Restrict the search results to those with a certain language by specifying langRestrict to a two-letter ISO-639-1 code, such as "en" or "fr".| 
 | orderBy            | Order of the volume search results.                                                                                                          | 
 | printType          | Restrict to books or magazines.                                                                                                              | 
-</td>
+
 ### Get book by ID
 To get a book from his ID.
 ```dart
