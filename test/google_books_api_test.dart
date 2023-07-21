@@ -17,4 +17,9 @@ void main() {
     expect(book.volumeInfo.title,
         'A Study of Income and Expenditures in Sixty Colleges. Year 1953-54');
   });
+
+  test('get book by ISBN', () async {
+    final Book book = await GoogleBooksApi().getBookByIsbn('0771595158');
+    expect(book.volumeInfo.title, 'A Book Dragon');
+  });
 }

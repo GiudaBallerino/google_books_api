@@ -63,8 +63,13 @@ You can use this parameters to make the query more efficient.
 </table>
 
 ### Get book by ID
-To get a book from his ID.
+To get a book from the ID.
 ```dart
 final Book book = await GoogleBooksApi().getBookById('H0taAAAAYAAJ');
 ```
 
+### Get book by ISBN
+To get a book from the ISBN.
+```dart
+final Book book = await GoogleBooksApi().getBookByIsbn('0771595158');
+```

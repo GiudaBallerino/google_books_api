@@ -1,4 +1,3 @@
-
 import 'models.dart';
 import 'package:json_annotation/json_annotation.dart';
 
@@ -32,10 +31,9 @@ class SaleInfo {
 
   JsonMap toJson() => _$SaleInfoToJson(this);
 
-  @override
   List<Object?> get props => [
-    country,
-    saleability,
-    isEbook,
-  ];
+        country,
+        saleability,
+        isEbook,
+      ];
 }

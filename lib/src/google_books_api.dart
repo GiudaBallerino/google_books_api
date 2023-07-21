@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'enums/enums.dart';
-import 'models/models.dart' show Book, BookInfo;
+import 'models/models.dart' show Book;
 import 'package:http/http.dart' as http;
 
 class GoogleBooksApi {
@@ -46,6 +46,25 @@ class GoogleBooksApi {
     await http.get(Uri.parse(query)).then((result) {
       if (result.statusCode == 200) {
         book = Book.fromJson(jsonDecode(result.body));
+      } else {
+        throw BookNotFoundException;
+      }
+    });
+
+    return book;
+  }
+
+  // isbn will return a single book in items
+  Future<Book> getBookByIsbn(String isbn) async {
+    final query =
+        'https://www.googleapis.com/books/v1/volumes/?q=isbn:${isbn.trim()}';
+
+    late Book book;
+    await http.get(Uri.parse(query)).then((result) {
+      if (result.statusCode == 200) {
+        var item =
+            ((jsonDecode(result.body))['items'] as List<dynamic>?)?.first;
+        book = Book.fromJson(item);
       } else {
         throw BookNotFoundException;
       }
