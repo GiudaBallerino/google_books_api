@@ -14,6 +14,7 @@ void main() {
 
   test('get book by id', () async {
     final Book book = await GoogleBooksApi().getBookById('H0taAAAAYAAJ');
-    expect(book.volumeInfo.title, 'A Study of Income and Expenditures in Sixty Colleges. Year 1953-54');
+    expect(book.volumeInfo.title,
+        'A Study of Income and Expenditures in Sixty Colleges. Year 1953-54');
   });
 }
